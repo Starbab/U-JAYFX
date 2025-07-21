@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <style>
+        body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: purple;
+        ;
+        }
+        textarea {
+            margin-right: 15px;
+            width: 400px;
+            height: 120px;
+            font-size: 19px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+
+
+        }
+        button {
+            color: white;
+            background-color: rgb(6, 96, 6);
+            border-radius: 5px;
+            border: none;
+            width: 85px;
+            height: 25px;
+            cursor: pointer;
+            
+        }
+    </style>
+    <h3>My Diary app</h3>
+    <textarea id="entry" placeholder="write your thought here....">
+    </textarea><br>
+    <button onclick="save()">Save</button>
+    <div id="show"></div>
+
+    <script>
+      function save() {
+        let text = document.getElementById("entry").value;
+        localStorage.setItem("diary", text);
+        document.getElementById("show").innerText = text;
+      }
+    </script>
+  </body>
+</html>

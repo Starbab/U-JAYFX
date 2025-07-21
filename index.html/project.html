@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>U-JAY FX Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <style>
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #6b21a8, #ec4899, #facc15);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  overflow-x: hidden;
+  transition: background 0.5s ease;
+}
+
+body.dark {
+  background: linear-gradient(to bottom right, #1e1e1e, #2d2d2d);
+  color: #eee;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.title {
+  font-size: 3rem;
+  animation: fadeDown 1s ease forwards;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+  border-right: 2px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
+}
+
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  margin: 1.5rem auto;
+  border: 4px solid white;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  animation: scaleIn 1s ease-out forwards;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  animation: fadeIn 1.2s ease-in-out forwards;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 1.5rem;
+  width: 280px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  margin-top: 0.8rem;
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+.badge.pink {
+  background-color: #ec4899;
+}
+
+.badge.blue {
+  background-color: #3b82f6;
+}
+
+.contact-btn {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  background: #22c55e;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #16a34a;
+}
+
+.toggle-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.social-icons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.8rem;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #facc15;
+}
+
+/* Animations */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+  </style>
+  <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
+  <main class="container">
+    <h1 class="title">Welcome to U-JAY FX's Portfolio</h1>
+    <p class="subtitle">I am a Trader & Ethical Hacking Enthusiast | 200L Computer Science Student</p>
+
+    <div class="profile-pic">
+      <img src="yusuf.jpg" alt="U-JAY FX Profile"/>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <h2>💹 Trading Services</h2>
+        <p>Buy & sell assets with accurate market analysis. Let me help you grow your wealth through smart trades.</p>
+        <span class="badge pink">Crypto, Forex & More</span>
+      </div>
+
+      <div class="card">
+        <h2>🛡 Ethical Hacking</h2>
+        <p>I’m learning ethical hacking to secure systems & help prevent cyber threats. Watch this space for projects!</p>
+        <span class="badge blue">Beginner Projects</span>
+      </div>
+
+      <div class="card">
+        <h2>📞 Contact Me</h2>
+        <p>You can reach me for trading tips or IT collaboration:</p>
+        <p><strong>Phone:</strong> 09064499457</p>
+        <p><strong>WhatsApp:</strong> +2349064499457</p>
+        <button class="contact-btn">Message Me</button>
+      </div>
+    </div>
+
+    <div class="social-icons">
+      <a href="#" title="Facebook"><img src="facebook.jpeg" width="50px" ><i class="fab fa-facebook"></i></a>
+      <a href="#" title="Twitter"><img src="twiter.jpeg" width="50px"><i class="fab fa-instagram"></i></a>
+      <a href="#" title="instagram"><img src="ig.jpeg" width="50px"><i class="fab fa-twitter"></i></a>
+      <a href="https://wa.me/+2349064499457" title="whatsapp"><img src="whatsapp.png" sizes="5px" width="50px"
+        ><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Starbab/YUSYUF" title="GitHub"><img src="github.jpeg" width="50px"><i class="fab fa-github"></i></a>
+    </div>
+  </main>
+
+  <script> 
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
